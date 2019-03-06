@@ -597,6 +597,15 @@ This space occurs when a LUN is dynamically expanded.
 The amount of fragmentation in the pool.
 .It Sy free
 The amount of free space available in the pool.
+
+Not all
+.Sy free
+space in a pool will be
+.Sy available
+to zfs volumes in the pool. Some space is reserved, for the zpool itself. See
+.Sy spa_slop_shift
+in the
+.Xr zfs-module-parameters 5
 .It Sy freeing
 After a file system or snapshot is destroyed, the space it was using is
 returned to the pool asynchronously.
